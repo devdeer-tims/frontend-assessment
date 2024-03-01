@@ -1,20 +1,19 @@
 "use client";
-
-import React from "react";
+import { ChangeEvent, KeyboardEvent, MouseEvent, useState } from "react";
 
 /**
  * Renders a shopping list component.
  */
 function ShoppingList() {
   // State for the list of items
-  const [items, setItems] = React.useState([] as string[]);
+  const [items, setItems] = useState([] as string[]);
   // State for the input value
-  const [input, setInput] = React.useState("");
+  const [input, setInput] = useState("");
   // State for the invalid input
-  const [invalidInput, setInvalidInput] = React.useState(false);
+  const [invalidInput, setInvalidInput] = useState(false);
 
   // Function to handle input change
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
     setInvalidInput(false);
   };
@@ -38,14 +37,14 @@ function ShoppingList() {
     }
   };
 
-  const removeItem = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const removeItem = (e: MouseEvent<HTMLButtonElement>) => {
     const index = Number(e.currentTarget.value);
     const newItems = items.filter((_, i) => i !== index);
     setItems(newItems);
   };
 
   // Method to submit item with enter key
-  const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleEnter = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       if (!isValidInput() && input) {
         setItems([...items, input]);
