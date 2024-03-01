@@ -1,3 +1,3 @@
-import ShoppingList from './shoppingListComponent';
+import ShoppingList from "./shoppingListComponent";
 
 export default ShoppingList;
