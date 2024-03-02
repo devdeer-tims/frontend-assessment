@@ -83,8 +83,8 @@ function ShoppingList() {
       </ul>
       <div className="grid grid-flow-col gap-4">
         <input
-          className={`border-2 border-secondary placeholder-secondary bg-primary rounded-lg p-2 ${
-            invalidInput && "border-error"
+          className={`border-2 placeholder-secondary bg-primary rounded-lg p-2 ${
+            invalidInput ? "border-error" : "border-secondary"
           }`}
           type="text"
           placeholder="Neues Item"
@@ -93,8 +93,8 @@ function ShoppingList() {
           onKeyDown={handleEnter}
         />
         <button
-          className={`border-2 border-secondary placeholder-secondary bg-primary rounded-lg p-2 w-11 ${
-            invalidInput && "border-error"
+          className={`border-2 placeholder-secondary bg-primary rounded-lg p-2 w-11 ${
+            invalidInput ? "border-error" : "border-secondary"
           }`}
           onClick={addItem}
         >
