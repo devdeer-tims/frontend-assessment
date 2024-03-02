@@ -20,7 +20,7 @@ function ShoppingList() {
 
   // Function to doubles
   const isValidInput = () => {
-    if (items.some((item) => item.toLowerCase === input.toLowerCase)) {
+    if (items.some((item) => item.toLowerCase() === input.toLowerCase())) {
       setInvalidInput(true);
       setInput("");
       return true;
