@@ -1,5 +1,4 @@
 interface IListInputProps {
-  addItem: (item: string) => void;
-  isInvalid: boolean;
+  items: string[];
 }
 export default IListInputProps;
