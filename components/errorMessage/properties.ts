@@ -1,5 +1,5 @@
 interface IErrorMessageProps {
-    isInvalid: boolean;
+    error: boolean;
   }
   export default IErrorMessageProps;
   

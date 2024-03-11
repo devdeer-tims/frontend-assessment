@@ -1,6 +1,7 @@
+import { MouseEvent } from "react";
+
 interface IListItemProps {
-    item: string;
-    removeItem: () => void;
-  }
-  export default IListItemProps;
-  
+  items: string[];
+  removeItem: (event: MouseEvent<HTMLButtonElement>) => void;
+}
+export default IListItemProps;

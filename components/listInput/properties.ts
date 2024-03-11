@@ -1,4 +1,9 @@
+import { ChangeEvent } from "react";
+
 interface IListInputProps {
-  items: string[];
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onAdd: () => void;
+  error: boolean;
 }
 export default IListInputProps;

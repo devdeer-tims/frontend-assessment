@@ -1,17 +1,16 @@
 import { FunctionComponent } from "react";
 import IErrorMessageProps from "./properties";
 
-const ErrorMessage: FunctionComponent<IErrorMessageProps> = ({ isInvalid }) => {
-  if (!isInvalid) return null;
+const ErrorMessage: FunctionComponent<IErrorMessageProps> = ({ error }) => {
+  if (!error) return null;
 
   return (
     <div>
-      <div className="text-error text-center text-sm font-bold">
-        <div>
-          <p>Item already exists.</p>
-        </div>
-      </div>
+      <p className="text-error text-center text-sm font-bold">
+        Item already exists.
+      </p>
     </div>
   );
 };
+
 export default ErrorMessage;
